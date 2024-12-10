@@ -1,7 +1,7 @@
 
 import './App.css';
 import Header from './components/Header/Header';
-import { Link } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 
 const App = () => {
   
@@ -10,22 +10,21 @@ const App = () => {
 
     
     <div className="app-container">
-     <Header></Header>
-     <div>
-       test link
-       <div>
-        <button>
-        <Link to="/users">Go to user page</Link> 
-       
-        </button>
-        <button>
-        <Link to="/admins">Go to admin page</Link> 
-        </button>
-       </div>
-     </div>
+         <div className='header-container'>
+            <Header></Header>
+         </div>
+         <div className='main-container'>
 
-     
+         </div>
+         <div className='sidenav-container'>
+
+         </div>
+         <div className='app-content'>
+           <Outlet/>
+         </div>
     </div>
+ 
+ 
   );
 }
 
