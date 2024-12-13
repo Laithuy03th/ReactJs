@@ -10,8 +10,19 @@ body {
 
 .app-container{
   .header-container{
-    .navbar-nav .nav-link.active{
+    .navbar-nav {
+       z-index: 100;
+    }.nav-link
+    &.active{
       color: rgba(49, 193, 195, 0.897)
     }
   }
+}
+
+video{
+  position: fixed;
+  width: 100vw;
+ 
+  bottom: 0;
+  
 }
